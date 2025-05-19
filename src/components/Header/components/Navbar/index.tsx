@@ -1,4 +1,3 @@
-import { GithubLogo, LinkedinLogo, ReadCvLogo } from "@phosphor-icons/react";
 import { useState } from "react";
 import { useDarkTheme } from "../../../../store/useDarkTema";
 import { navList } from "../navList";
