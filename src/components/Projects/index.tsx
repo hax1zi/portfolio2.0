@@ -9,6 +9,7 @@ interface projetoDataType {
   techs: Array<string>;
   description: string;
   link: string;
+  github: string;
   blackOrWhite: string;
 }
 
@@ -25,7 +26,10 @@ export default function Projects() {
   }, []);
 
   return (
-    <section id="projects" className="w-full h-full flex  justify-center items-center flex-col pt-40">
+    <section
+      id="projects"
+      className="w-full h-full flex  justify-center items-center flex-col pt-40"
+    >
       <h3 className="text-4xl font-medium  mb-30">Alguns dos meus projetos</h3>
       <div className="space-y-50">
         {dataProjects.map((project) => (
@@ -36,6 +40,8 @@ export default function Projects() {
             desktopImg={project.desktop}
             mobileImg={project.mobile}
             key={project.id}
+            github={project.github}
+            link={project.link}
           >
             {project.description}
           </Card>

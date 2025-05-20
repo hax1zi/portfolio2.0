@@ -5,6 +5,7 @@ import Introduction from "./Introduction";
 import Experience from "../components/Experience";
 import Projects from "../components/Projects";
 import Header from "../components/Header";
+import Contact from "../components/Contact";
 
 export default function LeadingPage() {
   const [start, setStart] = useState<boolean>(false);
@@ -13,12 +14,12 @@ export default function LeadingPage() {
       <Introduction setStart={setStart} />
       {start && (
         <>
-          
           <Header />
-          <Home/>
+          <Home />
           <About />
           <Experience />
           <Projects />
+          <Contact />
         </>
       )}
     </>

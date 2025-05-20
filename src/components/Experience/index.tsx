@@ -62,8 +62,8 @@ export default function Experience() {
               </a>
             </div>
             <p className="opacity-80 mb-6 ">{selectedExperience.time}</p>
-            {selectedExperience.collaboration.map((list) => (
-              <div className="flex items-center gap-4 py-2">
+            {selectedExperience.collaboration.map((list, index) => (
+              <div key={index} className="flex items-center gap-4 py-2">
                 <div>
                   <DotOutline size={32} />
                 </div>
