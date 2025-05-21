@@ -1,4 +1,3 @@
-import React from "react";
 import NotebookScreen from "./NotebookScreen";
 import MobileScreen from "./MobileScreen";
 import { cn } from "../../../utils/cn";
