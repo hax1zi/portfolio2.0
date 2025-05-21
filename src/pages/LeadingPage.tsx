@@ -8,11 +8,11 @@ import Header from "../components/Header";
 import Contact from "../components/Contact";
 
 export default function LeadingPage() {
-  const [start, setStart] = useState<boolean>(false);
+  const [hasStarted, setHasStarted] = useState<boolean>(false);
   return (
     <>
-      <Introduction setStart={setStart} />
-      {start && (
+      <Introduction setStart={setHasStarted} />
+      {hasStarted && (
         <>
           <Header />
           <Home />

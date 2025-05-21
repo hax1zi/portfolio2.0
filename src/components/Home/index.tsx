@@ -7,13 +7,14 @@ export default function Home() {
       className="w-full h-screen flex flex-col justify-center items-center relative"
     >
       <div className="space-y-2">
-        <h4 className="text-4xl font-medium">Olá, sou o David</h4>
-        <h3 className="text-7xl uppercase font-bold">Desenvolvedor</h3>
+        <h1 className="text-4xl font-medium">Olá, sou o David</h1>
+        <h2 className="text-7xl uppercase font-bold">Desenvolvedor</h2>
         <div className="inline-flex">
-          <h2 className="text-7xl uppercase font-bold mr-4">Front-end</h2>
-          <img src="/icons/javascript.svg" width={64} />
-          <img src="/icons/typescript.svg" width={64} />
+          <h3 className="text-7xl uppercase font-bold mr-4">Front-end</h3>
+          <img alt="JavaScript" src="/icons/javascript.svg" width={64} />
+          <img alt="TypeScript" src="/icons/typescript.svg" width={64} />
           <img
+            alt="React"
             className="animate-[spin_4s_linear_infinite]"
             src="/icons/react.svg"
             width={64}
@@ -21,7 +22,7 @@ export default function Home() {
         </div>
         <p className="max-w-90">Sou um programador que não constrói apenas páginas e sim cada interação e experiência que o usuário terá nela.</p>
       </div>
-      <div className="flex flex-col items-center absolute bottom-6 animate-bounce">
+      <div className="flex flex-col items-center absolute bottom-6 animate-bounce" aria-hidden="true">
         <MouseScroll size={32} />
         <CaretDown size={20} />
       </div>

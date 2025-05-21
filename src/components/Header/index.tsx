@@ -28,6 +28,8 @@ export default function Header() {
             className="opacity-70 hover:opacity-100 transition-[opacity]"
             href={data?.github}
             target="_blank"
+            aria-label="Github"
+            rel="noopener noreferrer" 
           >
             <GithubLogo size={28} />
           </a>
@@ -35,6 +37,8 @@ export default function Header() {
             className="opacity-70 hover:opacity-100 transition-[opacity]"
             href={data?.curriculum}
             target="_blank"
+            aria-label="Curriculo"
+            rel="noopener noreferrer" 
           >
             <ReadCvLogo size={28} />
           </a>
@@ -42,6 +46,8 @@ export default function Header() {
             className="opacity-70 hover:opacity-100 transition-[opacity]"
             href={data?.linkedin}
             target="_blank"
+            aria-label="linkedin"
+            rel="noopener noreferrer" 
           >
             <LinkedinLogo size={28} />
           </a>

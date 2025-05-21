@@ -11,14 +11,19 @@ export default function Introduction({ setStart }: IntroductionProps) {
   const { darkTheme } = useDarkTheme();
 
   useEffect(() => {
-    setTimeout(() => {
+    const timerAnimation = setTimeout(() => {
       setAnimation(true);
     }, 500);
 
-    setTimeout(() => {
+    const timerHasStarted = setTimeout(() => {
       setStart(true);
     }, 1500);
-  }, []);
+
+    return () => {
+      clearTimeout(timerAnimation);
+      clearTimeout(timerHasStarted);
+    };
+  }, [setStart, setAnimation]);
 
   return (
     <section

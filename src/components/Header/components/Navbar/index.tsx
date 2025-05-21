@@ -6,7 +6,7 @@ import ButtonThema from "../../../ButtonTheme";
 
 export default function Navbar() {
   const { darkTheme } = useDarkTheme();
-  const [selectedLocation, setSelectedLocation] = useState<string | undefined>(
+  const [selectedLocation, setSelectedLocation] = useState<string>(
     ""
   );
 
@@ -16,14 +16,14 @@ export default function Navbar() {
         <div className="inline-flex space-x-2 mr-4">
           <img
             src={`/icons/DF-${darkTheme ? "white" : "black"}.svg`}
-            alt="logo"
+            alt="David Fontes logo"
             className="w-8 h-8"
           />
           <h1 className="text-2xl cursor-default font-medium">DavidFontes</h1>
         </div>
       
       </div>
-      <div className="text-xl flex ">
+      <div className="text-xl flex gap-2">
         {navList.map((item) => (
           <a key={item.id} href={item.local} className="text-base">
             <Button

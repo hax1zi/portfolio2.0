@@ -4,18 +4,15 @@ import Button from "./Button";
 
 export default function ButtonThema() {
   const { darkTheme, toggleTheme } = useDarkTheme();
-
-  if (darkTheme) {
-    return (
-      <Button onClick={() => toggleTheme()} variant="ghost">
-        <Moon size={28} />
-      </Button>
-    );
-  }
+  const Icon = darkTheme ? Moon : Sun;
 
   return (
-    <Button variant="ghost" onClick={() => toggleTheme()}>
-      <Sun size={28} />
+    <Button
+      variant="ghost"
+      onClick={() => toggleTheme()}
+      aria-label={`Mudar para tema ${darkTheme ? "claro" : "escuro"}`}
+    >
+      <Icon size={28} />
     </Button>
   );
 }

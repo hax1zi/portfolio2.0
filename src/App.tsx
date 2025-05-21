@@ -6,11 +6,7 @@ function App() {
 
   useEffect(() => {
     const root = document.documentElement;
-    if (darkTheme) {
-      root.classList.add("dark");
-    } else {
-      root.classList.remove("dark");
-    }
+    root.classList.toggle("dark", darkTheme === null ? false : darkTheme);
   }, [darkTheme]);
 
   return (

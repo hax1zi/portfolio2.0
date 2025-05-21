@@ -1,10 +1,6 @@
-interface NotebookScreenProps {
-  image: string;
-}
-
-export default function NotebookScreen({ image }: NotebookScreenProps) {
+export default function NotebookScreen({ image }: { image: string }) {
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center" aria-hidden="true">
       <div className="border-8 rounded-t-md  dark:border-gray-light">
         <img src={image} width={500} />
       </div>

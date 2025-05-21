@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Card from "./components/Card";
+import Card from "./components/ProjectCard";
 
 interface projetoDataType {
   id: number;
@@ -10,7 +10,6 @@ interface projetoDataType {
   description: string;
   link: string;
   github: string;
-  blackOrWhite: string;
 }
 
 export default function Projects() {
@@ -29,22 +28,16 @@ export default function Projects() {
     <section
       id="projects"
       className="w-full h-full flex  justify-center items-center flex-col pt-40"
+      aria-label="Alguns dos meus projetos"
     >
-      <h3 className="text-4xl font-medium  mb-30">Alguns dos meus projetos</h3>
+      <h2 className="text-4xl font-medium  mb-30">Alguns dos meus projetos</h2>
       <div className="space-y-50">
         {dataProjects.map((project) => (
           <Card
             direction={project.id === 2 ? "left" : ""}
-            title={project.title}
-            techs={project.techs}
-            desktopImg={project.desktop}
-            mobileImg={project.mobile}
+            project={project}
             key={project.id}
-            github={project.github}
-            link={project.link}
-          >
-            {project.description}
-          </Card>
+          />
         ))}
       </div>
     </section>
