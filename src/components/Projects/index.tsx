@@ -28,7 +28,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="w-full h-full flex  justify-center items-center flex-col pt-40"
+      className="w-full h-full flex justify-center items-center flex-col pt-40"
       aria-label="Alguns dos meus projetos"
     >
       <motion.h2
@@ -36,7 +36,7 @@ export default function Projects() {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0 }}
         viewport={{ once: true }}
-        className="text-4xl font-medium  mb-30"
+        className="text-4xl font-bold max-sm:text-2xl"
       >
         Alguns dos meus projetos
       </motion.h2>
@@ -46,7 +46,7 @@ export default function Projects() {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0}}
           viewport={{ once: true }}
-          className="mt-40"
+          className="mt-40 max-lg:mt-20"
         >
           <Card
             direction={project.id === 2 ? "left" : ""}

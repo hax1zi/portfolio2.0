@@ -35,7 +35,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="w-full h-full flex flex-col items-center px-side-spacing pt-40 space-y-4 focus"
+      className="w-full h-full flex flex-col items-center max-sm:px-8 max-lg:px-14 lg:px-side-spacing pt-40 space-y-4 focus"
       aria-label="Sobre mim"
     >
       <motion.h2
@@ -99,11 +99,11 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.2 + (tech.id * 0.2) }}
             viewport={{ once: true }}
             key={tech.id}
-            className="text-center flex flex-col items-center justify-center mx-4"
+            className="text-center flex flex-col items-center justify-center mx-4 max-sm:mx-1 flex-wrap"
             role="listitem"
           >
-            <img src={tech.src} width={64} height={64} alt={tech.name} />
-            <p>{tech.name}</p>
+            <img src={tech.src} className="max-sm:w-10" width={64} height={64} alt={tech.name} />
+            <p className="max-sm:text-sm">{tech.name}</p>
           </motion.div>
         ))}
       </div>

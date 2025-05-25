@@ -7,12 +7,12 @@ export default function Home() {
       id="home"
       className="w-full h-screen flex flex-col justify-center items-center relative"
     >
-      <div className="space-y-2">
+      <div className="space-y-2 max-sm:space-y-0">
         <motion.h1
           initial={{ y: -10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0 }}
-          className="text-4xl font-medium"
+          className="text-4xl font-medium max-sm:text-xl"
         >
           Olá, sou o David
         </motion.h1>
@@ -20,16 +20,16 @@ export default function Home() {
           initial={{ y: -10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-7xl uppercase font-bold"
+          className="text-7xl uppercase font-bold max-lg:text-5xl max-sm:text-3xl"
         >
           Desenvolvedor
         </motion.h2>
-        <div className="inline-flex">
+        <div className="flex items-center">
           <motion.h3
             initial={{ y: -10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="text-7xl uppercase font-bold mr-4"
+            className="text-7xl uppercase font-bold mr-4 max-sm:mr-0 max-lg:text-5xl max-sm:text-3xl"
           >
             Front-end
           </motion.h3>
@@ -39,6 +39,7 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.6 }}
             alt="JavaScript"
             src="/icons/javascript.svg"
+            className="max-lg:w-12 max-sm:w-10"
             width={64}
           />
           <motion.img
@@ -47,6 +48,7 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.8 }}
             alt="TypeScript"
             src="/icons/typescript.svg"
+            className="max-lg:w-12 max-sm:w-10"
             width={64}
           />
           <motion.img
@@ -54,7 +56,7 @@ export default function Home() {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 1 }}
             alt="React"
-            className="animate-[spin_4s_linear_infinite]"
+            className="animate-[spin_4s_linear_infinite] max-lg:w-12 max-sm:w-10"
             src="/icons/react.svg"
             width={64}
           />
@@ -63,7 +65,7 @@ export default function Home() {
           initial={{ y: -10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 1.2 }}
-          className="max-w-90"
+          className="max-w-90 max-sm:hidden"
         >
           Sou um programador que não constrói apenas páginas e sim cada
           interação e experiência que o usuário terá nela.

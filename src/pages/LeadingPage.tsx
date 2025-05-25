@@ -1,27 +1,37 @@
-import { useState } from "react";
 import About from "../components/About";
 import Home from "../components/Home";
-import Introduction from "./Introduction";
 import Experience from "../components/Experience";
 import Projects from "../components/Projects";
-import Header from "../components/Header";
 import Contact from "../components/Contact";
+import { cn } from "../utils/cn";
+import { useMenuMobile } from "../store/useMenuMobile";
+import { useEffect, useState } from "react";
 
 export default function LeadingPage() {
-  const [hasStarted, setHasStarted] = useState<boolean>(false);
+  const { menuMobile } = useMenuMobile();
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    if (menuMobile === true) {
+      setTimeout(() => {
+        setShow(true);
+      }, 500);
+    } else {
+      setShow(false)
+    }
+  }, [menuMobile]);
   return (
-    <>
-      <Introduction setStart={setHasStarted} />
-      {hasStarted && (
-        <>
-          <Header />
-          <Home />
-          <About />
-          <Experience />
-          <Projects />
-          <Contact />
-        </>
+    <main
+      className={cn(
+        "dark:bg-black dark:text-light bg-white text-text",
+        show && "invisible"
       )}
-    </>
+    >
+      <Home />
+      <About />
+      <Experience />
+      <Projects />
+      <Contact />
+    </main>
   );
 }

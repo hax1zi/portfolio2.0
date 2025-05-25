@@ -15,14 +15,12 @@ export default function Button({
   className,
   ...props
 }: ButtonProps) {
-  const baseClasses =
-    "cursor-pointer focus:outline-none";
+  const baseClasses = "cursor-pointer focus:outline-none";
 
   const variantClasses = {
     button: "bg-blue-dark px-4 py-2 rounded-md",
-    nav: "text-center w-full px-2 py-1 rounded-md",
-    ghost:
-      "dark:hover:bg-gray px-2 rounded-md hover:bg-gray/30 font-medium",
+    nav: "text-center w-full px-2 pt-1 rounded-md",
+    ghost: "dark:hover:bg-gray p-2 rounded-md hover:bg-gray/30 font-medium",
     link: "text-blue-600 underline hover:text-blue-800",
   };
 
@@ -30,7 +28,7 @@ export default function Button({
     const [hover, setHover] = useState(false);
 
     return (
-      <div className="group">
+      <div role="group">
         <button
           {...props}
           className={cn(
@@ -45,6 +43,7 @@ export default function Button({
           {children}
         </button>
         <div
+          aria-hidden="true"
           className={cn(
             "w-0 h-1 bg-blue-dark transition-all duration-300",
             hover && "w-full"

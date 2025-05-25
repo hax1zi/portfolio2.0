@@ -2,7 +2,7 @@ import { useState } from "react";
 import { experienceList } from "./experienceList";
 import { DotOutline } from "@phosphor-icons/react";
 import { cn } from "../../utils/cn";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface ExperienceItem {
   id: number;
@@ -22,7 +22,7 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="w-full pt-40 flex justify-center items-center flex-col"
+      className="py-20 flex justify-center items-center flex-col"
       aria-label="Experiências profissionais"
     >
       <motion.h2
@@ -34,13 +34,15 @@ export default function Experience() {
       >
         Onde eu trabalhei
       </motion.h2>
-      <div className="inline-flex" role="tablist">
+      <div className="flex justify-center md:gap-6 max-md:flex-col max-md:items-center ">
         <motion.div
           initial={{ y: -10, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
           viewport={{ once: true }}
-          className="flex flex-col"
+          className="flex flex-col max-md:flex-row"
+          role="tablist"
+          aria-label="Seção"
         >
           {experienceList.map((experience) => (
             <button
@@ -48,7 +50,7 @@ export default function Experience() {
               aria-controls={`panel-${experience.id}`}
               onClick={() => setSelectedExperience(experience)}
               className={cn(
-                "text-left p-2 px-4 hover:bg-blue/50 transition-colors border-r-4 border-blue/20 cursor-pointer",
+                "text-left p-2 px-4 hover:bg-blue/50 transition-colors max-md:border-b-4 max-md:border-r-0 border-r-4 max-md:w-28 max-md:text-center max-md:text-sm border-blue/20 cursor-pointer",
                 experience.title === selectedExperience.title && "border-blue"
               )}
               role="tab"
@@ -64,57 +66,41 @@ export default function Experience() {
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 10 }}
-            transition={{ duration: 0.3 }}
-            className="px-10 max-w-2xl min-w-2xl min-h-[400px]"
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="max-w-[600px] max-md:min-w-0 max-md:text-center"
             role="tabpanel"
             id={`panel-${selectedExperience.id}`}
             tabIndex={0}
           >
-            <div className="inline-flex space-x-2">
-              <motion.h3
-                initial={{ x: -10, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="font-bold text-xl"
-              >
+            <div className="inline-flex space-x-2 mt-4">
+              <h3 className="font-bold text-xl max-sm:text-base">
                 {selectedExperience.position}
-              </motion.h3>
-              <motion.a
-                initial={{ x: -10, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
+              </h3>
+              <a
                 href={selectedExperience.link}
                 target="_blank"
-                className="text-xl text-blue border-b-2"
+                className="text-xl text-blue border-b-2 max-sm:text-base"
               >
                 {selectedExperience.enterprise}
-              </motion.a>
+              </a>
             </div>
-            <motion.p
-              initial={{ x: -10, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-              viewport={{ once: true }}
-              className="opacity-80 mb-6 "
-            >
-              {selectedExperience.time}
-            </motion.p>
+            <div>
+              <p className="opacity-80 mb-6 text-left max-md:text-center max-md:text-sm">
+                {selectedExperience.time}
+              </p>
+            </div>
             {selectedExperience.collaboration.map((list, index) => (
-              <motion.div
-                initial={{ x: -10, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.8 + index * 0.2 }}
-                viewport={{ once: true }}
+              <div
                 key={index}
-                className="flex items-center gap-4 py-2"
+                className="flex items-center max-md:justify-center gap-4 max-md:gap-0 py-2"
               >
-                <div>
+                <div className="">
                   <DotOutline size={32} />
                 </div>
-                <p className="opacity-80">{list}</p>
-              </motion.div>
+                <p className="opacity-80 w-[80vw] md:w-[60vw] max-md:text-left">
+                  {list}
+                </p>
+              </div>
             ))}
           </motion.div>
         </AnimatePresence>

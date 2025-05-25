@@ -22,18 +22,18 @@ export default function ProjectCard({ project, direction }: ProjectCardProps) {
   return (
     <article
       className={cn(
-        "flex gap-24",
-        direction === "left" && "flex-row-reverse gap-10"
+        "flex gap-24 max-lg:gap-0 justify-center flex-wrap",
+        direction === "left" && "flex-row-reverse max-lg:flex-row"
       )}
       aria-label={`Projeto: ${project.title}`}
     >
       <div className="relative">
         <NotebookScreen image={project.desktop} />
-        <MobileScreen image={project.mobile} />
+        <MobileScreen direction={direction} image={project.mobile} />
       </div>
 
-      <div className="max-w-[400px] space-y-4 flex flex-col justify-center">
-        <h4 className="font-bold text-4xl">{project.title}</h4>
+      <div className="max-w-[340px] max-sm:max-w-[300px] space-y-4 flex flex-col justify-center">
+        <h3 className="font-bold text-4xl">{project.title}</h3>
         <p className="opacity-80 leading-relaxed text-lg">
           {project.description}
         </p>
