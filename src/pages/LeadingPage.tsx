@@ -23,7 +23,7 @@ export default function LeadingPage() {
   return (
     <main
       className={cn(
-        "dark:bg-black dark:text-light bg-white text-text",
+        "dark:bg-black dark:text-light bg-[#F0F0F0] text-text",
         show && "invisible"
       )}
     >
