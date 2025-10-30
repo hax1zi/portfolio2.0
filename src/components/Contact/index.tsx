@@ -2,7 +2,6 @@ import { ToastContainer } from "react-toastify";
 import { FileUser, Github, Linkedin, Mail, Phone } from "lucide-react";
 
 export default function Contact() {
-
     return (
         <section
             className="w-full h-full py-20 flex justify-center items-center flex-col gap-2"
@@ -17,14 +16,22 @@ export default function Contact() {
                 Minhas caixa de entrada está sempre disponivel
             </p>
             <div className="flex justify-center flex-col items-center gap-4">
-                <div className="flex gap-4 max-sm:flex-col w-[233px]">
-                    <a href="https://github.com/hax1zi" target="_blank" className="p-4 border text-xl inline-flex items-center gap-2 hover:text-blue transition-all hover:scale-[1.1]">
+                <div className="flex gap-4 max-sm:flex-col ">
+                    <a
+                        href="https://github.com/hax1zi"
+                        target="_blank"
+                        className="p-4 border text-xl w-[220px]  inline-flex items-center gap-2 hover:text-blue transition-all hover:scale-[1.1]"
+                    >
                         <Github size={32} />
                         <div className="flex flex-col">
                             GitHub <label className="text-xs">/hax1zi</label>
                         </div>
                     </a>
-                    <a href="https://www.linkedin.com/in/david-fontes-9b84a4201/" target="_blank" className="p-4 border text-xl inline-flex items-center gap-2 hover:text-blue transition-all hover:scale-[1.1]">
+                    <a
+                        href="https://www.linkedin.com/in/david-fontes-9b84a4201/"
+                        target="_blank"
+                        className="p-4 border text-xl w-[220px] inline-flex items-center gap-2 hover:text-blue transition-all hover:scale-[1.1]"
+                    >
                         <Linkedin size={32} />
                         <div className="flex flex-col">
                             Linkedin{" "}
@@ -38,7 +45,7 @@ export default function Contact() {
                     <a
                         href="/DavidFontes-cv.pdf"
                         target="_blank"
-                        className="p-4 border text-xl inline-flex items-center gap-2 hover:text-blue transition-all hover:scale-[1.1]"
+                        className="p-4 border text-xl w-[220px] inline-flex items-center gap-2 hover:text-blue transition-all hover:scale-[1.1]"
                     >
                         <FileUser size={32} />
                         <div className="flex flex-col ">
@@ -48,7 +55,10 @@ export default function Contact() {
                             </label>
                         </div>
                     </a>
-                    <a href="mailto:davidfontes303@gmail.com" className="p-4 border text-xl inline-flex items-center gap-2 hover:text-blue transition-all hover:scale-[1.1]">
+                    <a
+                        href="mailto:davidfontes303@gmail.com"
+                        className="p-4 border text-xl inline-flex w-[220px] items-center gap-2 hover:text-blue transition-all hover:scale-[1.1]"
+                    >
                         <Mail size={32} />
                         <div className="flex flex-col">
                             Email{" "}
@@ -57,7 +67,10 @@ export default function Contact() {
                             </label>
                         </div>
                     </a>
-                    <a href="tel:7999634862" className="p-4 border text-xl inline-flex items-center gap-2 hover:text-blue transition-all hover:scale-[1.1]">
+                    <a
+                        href="tel:7999634862"
+                        className="p-4 border text-xl inline-flex w-[220px] items-center gap-2 hover:text-blue transition-all hover:scale-[1.1]"
+                    >
                         <Phone size={32} />
                         <div className="flex flex-col">
                             Telefone{" "}
@@ -65,7 +78,6 @@ export default function Contact() {
                         </div>
                     </a>
                 </div>
-                
             </div>
         </section>
     );
