@@ -27,7 +27,7 @@ export default function ProjectCard({ project, direction }: ProjectCardProps) {
             aria-label={`Projeto: ${project.title}`}
         >
             <div className="relative">
-                <div className="w-[400px] h-[300px] overflow-hidden">
+                <div className="w-[400px] h-[300px] overflow-hidden max-sm:w-[350px] max-sm:h-[250px]">
                     <img
                         src={project.desktop}
                         className="w-full h-full object-cover"

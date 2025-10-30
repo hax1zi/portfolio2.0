@@ -42,15 +42,7 @@ export default function About() {
             <article>
                 <h4 className="font-medium text-7xl text-center">Olá, mundo</h4>
 
-                <div className="flex gap-10 flex-row mt-16">
-                    <p className="text-lg max-w-[550px] opacity-80 leading-relaxed">
-                        Iniciei minha jornada aos 14 anos em uma mentoria de
-                        desenvolvimento web, e desde então venho me aprofundando
-                        no mundo da programação. Também tenho experiências
-                        anteriores com desenvolvimento backend em Node.js e Go,
-                        além de ter atuado em projetos voltados à cibersegurança
-                        no instituto <b className="text-blue">ATRI</b>.
-                    </p>
+                <div className="flex gap-10 flex-row mt-16 max-sm:flex-col">
                     <p className="text-lg max-w-lg opacity-80 leading-relaxed">
                         Atualmente sou desenvolvedor Front-end na{" "}
                         <b className="text-blue">Atos Capital</b> atuando na
@@ -59,9 +51,17 @@ export default function About() {
                         código limpo, pensar na experiência do usuário e manter
                         a performance como prioridade.
                     </p>
+                    <p className="text-lg max-w-[550px] opacity-80 leading-relaxed ">
+                        Iniciei minha jornada aos 14 anos em uma mentoria de
+                        desenvolvimento web, e desde então venho me aprofundando
+                        no mundo da programação. Também tenho experiências
+                        anteriores com desenvolvimento backend em Node.js e Go,
+                        além de ter atuado em projetos voltados à cibersegurança
+                        no instituto <b className="text-blue">ATRI</b>.
+                    </p>
                 </div>
             </article>
-            <div className="border p-6 space-x-4 flex flex-col items-center gap-4 mt-14">
+            <div className="border p-4 space-x-4 flex flex-col items-center gap-4 mt-14">
                 <div className="space-x-4">
                     <span>React</span>
                     <span>Next.js</span>
@@ -75,7 +75,7 @@ export default function About() {
                     <span>Pyhton</span>
                     <span>Rust</span>
                 </div>
-                <div className="space-x-4">
+                <div className="space-x-4 max-sm:hidden">
                     <span>Desenvolvimento front-end</span>
                     <span>Desenvolvimento back-end</span>
                     <span>Cibersegurança</span>

@@ -17,7 +17,24 @@ export default function Contact() {
                 Minhas caixa de entrada está sempre disponivel
             </p>
             <div className="flex justify-center flex-col items-center gap-4">
-                <div className="flex gap-4">
+                <div className="flex gap-4 max-sm:flex-col w-[233px]">
+                    <a href="https://github.com/hax1zi" target="_blank" className="p-4 border text-xl inline-flex items-center gap-2 hover:text-blue transition-all hover:scale-[1.1]">
+                        <Github size={32} />
+                        <div className="flex flex-col">
+                            GitHub <label className="text-xs">/hax1zi</label>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/david-fontes-9b84a4201/" target="_blank" className="p-4 border text-xl inline-flex items-center gap-2 hover:text-blue transition-all hover:scale-[1.1]">
+                        <Linkedin size={32} />
+                        <div className="flex flex-col">
+                            Linkedin{" "}
+                            <label className="text-xs">
+                                /david-fontes-9b84a4201
+                            </label>
+                        </div>
+                    </a>
+                </div>
+                <div className="flex gap-4 max-sm:flex-col">
                     <a
                         href="/DavidFontes-cv.pdf"
                         target="_blank"
@@ -48,23 +65,7 @@ export default function Contact() {
                         </div>
                     </a>
                 </div>
-                <div className="flex gap-4">
-                    <a href="https://github.com/hax1zi" target="_blank" className="p-4 border text-xl inline-flex items-center gap-2 hover:text-blue transition-all hover:scale-[1.1]">
-                        <Github size={32} />
-                        <div className="flex flex-col">
-                            GitHub <label className="text-xs">/hax1zi</label>
-                        </div>
-                    </a>
-                    <a href="https://www.linkedin.com/in/david-fontes-9b84a4201/" target="_blank" className="p-4 border text-xl inline-flex items-center gap-2 hover:text-blue transition-all hover:scale-[1.1]">
-                        <Linkedin size={32} />
-                        <div className="flex flex-col">
-                            Linkedin{" "}
-                            <label className="text-xs">
-                                /david-fontes-9b84a4201
-                            </label>
-                        </div>
-                    </a>
-                </div>
+                
             </div>
         </section>
     );

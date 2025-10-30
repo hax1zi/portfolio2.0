@@ -20,7 +20,7 @@ export default function Experience() {
     return (
         <section
             id="experience"
-            className="h-[80vh] flex justify-center items-center flex-col "
+            className="h-[80vh] flex justify-center items-center flex-col max-sm:mb-12"
             aria-label="Experiências profissionais"
         >
             <h2 className="text-4xl font-medium mb-12">Onde eu trabalhei</h2>

@@ -21,7 +21,7 @@ export const experienceList = [
         link: "https://github.com/institute-atri",
         collaboration: [
             "Atuação na equipe de cibersegurança em projetos voltados à análise e exploração de sistemas.",
-            "Participação ativa nas reuniões de daily às terças e quintas-feiras, colaborando com organização e entrega do time.",
+            "Participação ativa nas reuniões colaborando com organização e entrega do time.",
             "Contribuição no projeto DEEP, que aplica NLP e machine learning para apoiar autoridades na investigação de crimes por meio da análise de grandes volumes de dados judiciais.",
             "Colaboração no desenvolvimento do WASTRAP, uma ferramenta de pentest para WordPress com análise de vulnerabilidades em plugins, temas e usuários, além de automação de ataques de força bruta.",
         ],

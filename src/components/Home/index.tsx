@@ -37,8 +37,7 @@ export default function Home() {
                     />
                 </div>
                 <p className="max-w-[600px] max-sm:max-w-[300px]">
-                    Sou um programador que não constrói apenas páginas e sim
-                    cada interação e experiência que o usuário terá nela.
+                    Construindo sistemas em forma de arte.
                 </p>
             </div>
             <div className="absolute bottom-0 flex flex-col items-center animate-bounce">
