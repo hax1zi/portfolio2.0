@@ -1,36 +1,4 @@
-import { useDarkTheme } from "../../store/useDarkTema";
-
 export default function About() {
-    const { darkTheme } = useDarkTheme();
-
-    const techList = [
-        {
-            id: 1,
-            src: `/techs/${darkTheme ? "dark" : "light"}/javascript.svg`,
-            name: "JavaScript",
-        },
-        {
-            id: 2,
-            src: `/techs/${darkTheme ? "dark" : "light"}/typescript.svg`,
-            name: "TypeScript",
-        },
-        {
-            id: 3,
-            src: `/techs/${darkTheme ? "dark" : "light"}/react.svg`,
-            name: "React",
-        },
-        {
-            id: 4,
-            src: `/techs/${darkTheme ? "dark" : "light"}/nodejs.svg`,
-            name: "NodeJS",
-        },
-        {
-            id: 5,
-            src: `/techs/${darkTheme ? "dark" : "light"}/git.svg`,
-            name: "Git",
-        },
-    ];
-
     return (
         <section
             id="about"

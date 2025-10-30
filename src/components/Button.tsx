@@ -16,6 +16,7 @@ export default function Button({
   ...props
 }: ButtonProps) {
   const baseClasses = "cursor-pointer focus:outline-none";
+  const [hover, setHover] = useState(false);
 
   const variantClasses = {
     button: "bg-blue-dark px-4 py-2 rounded-md",
@@ -25,7 +26,6 @@ export default function Button({
   };
 
   if (variant === "nav") {
-    const [hover, setHover] = useState(false);
 
     return (
       <div role="group">
